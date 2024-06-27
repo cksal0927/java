@@ -24,18 +24,20 @@ public class Input2 {
 		String 이름1, 부서1;
 		int 월급1;
 		System.out.print("이름1 : ");
-		이름1 = scan.next();
+		이름1 = scan.nextLine();
 		System.out.print("부서1 : ");
-		부서1 = scan.next();
+		부서1 = scan.nextLine();
 		System.out.print("월급1 : ");
 		월급1 = scan.nextInt();
+		
+		scan.nextLine();
 		
 		String 이름2, 부서2;
 		int 월급2;
 		System.out.print("이름2 : ");
-		이름2 = scan.next();
+		이름2 = scan.nextLine();
 		System.out.print("부서2 : ");
-		부서2 = scan.next();
+		부서2 = scan.nextLine();
 		System.out.print("월급2 : ");
 		월급2 = scan.nextInt();
 		
@@ -45,6 +47,10 @@ public class Input2 {
 		
 		System.out.printf("직원1의 이름 : %s, 부서: %s, 실수령액: %.0f만 원 \n", 이름1, 부서1, 실수령액1);
 		System.out.printf("직원2의 이름 : %s, 부서: %s, 실수령액: %.0f만 원", 이름2, 부서2, 실수령액2);
+		
+		/*
+		 next() - 스페이스키, 탭키, 엔터키를 누르면 입력 끝
+		*/
 	}
 
 }
