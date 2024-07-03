@@ -98,7 +98,7 @@ class WebNovel{
 		this.rating = rating;
 	}
 	
-//	public String{
-//		
-//	}
+	public String toString() {
+		return name + " " + point + "Á¡  " + rating;
+	}
 }
