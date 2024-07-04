@@ -35,7 +35,7 @@ class a{
 // 반환타입 - int, short, float, double, char, boolean, void, String
 // 		   메서드의 return 데이터 타입
 //  	   return 10;  ->  반환타입 int, short, long
-//		   return income;  ->  income 변수의 타입을 반화타입으로
+//		   return income;  ->  income 변수의 타입을 반환타입으로
 
 // void 타입은 반환값이 없다는 의미
 
