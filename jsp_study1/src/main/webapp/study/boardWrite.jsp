@@ -4,7 +4,7 @@
 <%-- boardWrite.jsp --%>
 <%-- 스타일 적용하려면 boardWrite.css 만들어서 작성 --%>
 
-<form method="post" action="boardSave.jsp">
+<form method="post" action="boardSave.jsp" enctype="multipart/form-data">
 	<div id="writeBox">
 		<div class="writeInput">
 			<label>제목</label>
@@ -12,7 +12,7 @@
 		</div>
 		<div class="writeInput">
 			<label>이미지</label>
-			<input type="file" name="" id="">
+			<input type="file" name="boardImg" id="boardImg" accept=".jpg, .png, .jpeg, .gif"> <!-- accept="image/*" accept="video/*" -->
 		</div>
 		<div class="writeInput">
 			<label>내용</label>

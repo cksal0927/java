@@ -17,7 +17,7 @@
 				<li>탕탕탕탕 탕수육</li>
 				<li>연어장덮밥 최고</li>
 			</ul>
-			<p>more</p>
+			<p>more+</p>
 		</div>
 		<div class="boardBox textBox">
 			<h3>게시판</h3>
@@ -28,7 +28,7 @@
 				<li>JAVA</li>
 				<li>JSP</li>
 			</ul>
-			<p>more</p>
+			<p>more+</p>
 		</div>
 	</div>
 </div>
