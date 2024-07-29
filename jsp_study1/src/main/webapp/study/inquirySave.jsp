@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"  import="study.* , java.sql.*" %>
-    
+    pageEncoding="UTF-8"  import="study.* , java.sql.* " %>
+
 <%-- inquirySave.jsp --%>
+
 
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -12,7 +13,8 @@
 	String pw = request.getParameter("password");
 	
 	// 작성한 문의글 관리자에게 메일 전송
-	SendEmail.sendEmail(email, title, content);
+	// SendEmail.sendEmail(email, title, content);
+	
 	
 	DBconnect db = new DBconnect();
 	
@@ -45,11 +47,6 @@
 			System.out.println("저장실패");
 		}
 		
-		response.sendRedirect("/jsp_study1/study/?part=inquiry");
+		response.sendRedirect("//study/?part=inquiry");
 	}
 %>
-
-
-
-
-
