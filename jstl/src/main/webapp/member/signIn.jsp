@@ -10,7 +10,7 @@
 
 	<h2>로그인 화면</h2>
 	<div id="signinBox">
-		<form id="signFm" method="post" action="signCheck.jsp">
+		<form id="signFm" method="post" action="/signInCheck.do">
 			<div class="signinInput">
 				<div class="loginInput">
 					<b>아이디</b>
