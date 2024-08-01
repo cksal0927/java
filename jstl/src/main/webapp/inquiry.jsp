@@ -4,7 +4,7 @@
 <%-- inquiry.jsp --%>
 
 <h3>문의글 작성</h3>
-<form action="/inquiry">
+<form method="post" action="/inquiry">
 	<input type="text" name="title"> <br>
 	<input type="text" name="writer"> <br>
 	|<button>등록</button>

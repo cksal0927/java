@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form method="post" action="/board.jsp">
+	<form method="post" action="/board">
 	<button>글 작성</button>
 	</form>
 	

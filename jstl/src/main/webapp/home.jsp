@@ -11,13 +11,13 @@
 </head>
 <body>
 
-	<c:if test="${sessionScope.user }">
+	<c:if test="${sessionScope.user == null}">
 		<a href="/signUp.do">회원가입</a>
 		<a href="/signIn.do">로그인</a>
 	</c:if>
 	
 	<c:if test="${session.Scope.user != null }">
-		${sessionScope.user } <a href="">로그아웃</a>
+		${sessionScope.user } <a href="/logout.do">로그아웃</a>
 	</c:if>
 	
 	<a href="/board.do">게시판</a>

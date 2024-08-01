@@ -5,10 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="board/boardWrite.css">
+
 </head>
 <body>
 
-	<form method="post" action="/write.do" enctype="multipart/form-data">
+	<form method="post" action="/write.do">
 	<input type="hidden" name="method" value="write">
 	<div id="writeBox">
 		<div class="writeInput">

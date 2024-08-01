@@ -5,30 +5,31 @@ import javax.servlet.http.HttpServletResponse;
 
 import DAO.MemberDAO;
 
-public class SignIn implements MainActive{
-	
+public class SignIn implements MainActive {
+
 	@Override
 	public String action(HttpServletRequest request, HttpServletResponse response) {
 		
-		if(request.getSession().getAttribute("user") != null){  // 로그인 중인 상태일 경우
-			request.getSession().removeAttribute("user");  // user 세션 삭제
-		}else {  // 로그인 시도
+		String view = "/";
+		
+		if(request.getSession().getAttribute("user") != null) { // 로그인중 상태일경우
+			request.getSession().removeAttribute("user"); //user세션 삭제
+		}else { // 로그인 시도
 			String id = request.getParameter("userId");
 			String pw = request.getParameter("userPassword");
-		
-			// 데이터베이스에서 아이디와 비밀번호 조회하기
+			view = request.getParameter("preURL");
+			
+			// 데이터베이스에서 아이디 비번 조회 하기
 			MemberDAO dao = new MemberDAO();
 			boolean isSuccess = dao.login(id, pw);
-			if(isSuccess) {  // 아이디 비밀번호가 데이터베이스에 존재한다면
+			if( isSuccess ) { // 아이디 비번이 데이터베이스에 존재한다면
 				request.getSession().setAttribute("user", id);
 			}
 		}
 		
 		try {
-			response.sendRedirect("/");
-		}catch(Exception e) {
-			
-		}
+			response.sendRedirect(view);
+		}catch(Exception e) {  }
 		
 		return null;
 	}
