@@ -1,3 +1,4 @@
+
 package service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +11,7 @@ public class SignIn implements MainActive {
 	@Override
 	public String action(HttpServletRequest request, HttpServletResponse response) {
 		
-		String view = "/";
+		String view="/";
 		
 		if(request.getSession().getAttribute("user") != null) { // 로그인중 상태일경우
 			request.getSession().removeAttribute("user"); //user세션 삭제

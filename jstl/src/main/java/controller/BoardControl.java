@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.io.IOException;
@@ -28,7 +29,8 @@ public class BoardControl extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 게시글 제목을 클릭하면 요청 방식이 get이기 때문에 doGet 메서드가 호출된다.
+		// 게시글 제목 클릭하면 요청방식이 get이기때문에
+		// doGet 메서드가 호출된다.
 		
 		RequestDispatcher rd = request.getRequestDispatcher("boardView.jsp");
 		rd.forward(request, response);
@@ -38,7 +40,8 @@ public class BoardControl extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 글 작성을 클릭하면 클라이언트의 요청 방식이 post이기 때문에 doPost 메서드가 호출된다.
+		// 글작성 클릭하면 클라이언트의 요청방식이 post 이기때문에
+		// doPost 메서드가 호출된다.
 		
 		RequestDispatcher rd = request.getRequestDispatcher("boardWrite.jsp");
 		rd.forward(request, response);

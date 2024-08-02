@@ -1,3 +1,4 @@
+
 package service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +12,7 @@ public class BoardWrite implements MainActive {
 	@Override
 	public String action(HttpServletRequest request, HttpServletResponse response) {
 		String method = request.getParameter("method");
-		if( method != null ) {  // 게시글을 작성할 경우
+		if( method != null ) { // 게시글 작성 할경우
 			String title= request.getParameter("title");
 			String content = request.getParameter("content");
 			String writer = (String)request.getSession().getAttribute("user");
@@ -23,13 +24,9 @@ public class BoardWrite implements MainActive {
 			try { response.sendRedirect("/board.do"); }catch(Exception e) {}
 			return null;
 			
-		}else {  // 게시글 작성 페이지를 요청할 경우
+		}else {// 게시글 작성페이지 요청한 경우
 			return "board/boardWrite.jsp";
 		}
 	}
 
 }
-
-
-
-

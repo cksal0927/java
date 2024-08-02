@@ -1,7 +1,8 @@
+
 package DTO;
 
+
 public class MemberDTO {
-	
 	private int memberId;
 	private String userId;
 	private String userPassword;
@@ -9,17 +10,20 @@ public class MemberDTO {
 	private String userName;
 	
 	public MemberDTO() {}
-	public MemberDTO(String userId, String userPassword, String userEmail, String userName) {
-		this.userId = userId;
-		this.userPassword = userPassword;
-		this.userEmail = userEmail;
-		this.userName = userName;
+	public MemberDTO(String userId, String userPassword, 
+			String userEmail, String userName) {
+		this.userId=userId;
+		this.userPassword=userPassword;
+		this.userEmail=userEmail;
+		this.userName=userName;
 	}
-	public MemberDTO(int id, String userId, String userPassword, String userEmail, String userName) {
-		this(userId, userPassword, userEmail, userName);
-		this.memberId = id;
+	public MemberDTO(int id, String userId, String userPassword,
+			String userEmail, String userName) {
+		this(userId,userPassword, userEmail, userName);
+		this.memberId=id;
 	}
 	
+
 	public int getMemberId() {
 		return memberId;
 	}
@@ -50,5 +54,7 @@ public class MemberDTO {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+	
+	
 
 }
